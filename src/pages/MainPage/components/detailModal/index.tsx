@@ -15,9 +15,7 @@ interface IDetailModal {
 }
 
 const DetailModal: FC<IDetailModal> = ({serialCode}: IDetailModal) => {
-    console.log(serialCode);
     const {data, isLoading} = useGetDetail(serialCode);
-    console.log(data);
     const classes = useDetailModalStyle();
     return (<Box className={classes.detailBox}>
         <Paper sx={{
